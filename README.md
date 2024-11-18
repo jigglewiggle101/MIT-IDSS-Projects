@@ -39,7 +39,82 @@ The dataset includes:
 - **Timing**: Day of the week (weekday/weekend), food preparation time, delivery time.
 - **Customer Feedback**: Ratings out of 5.
 
-#### Submission Options
-1. **Full-code**: Jupyter Notebook (.html format) with comprehensive data analysis.
-2. **Low-code**: Business presentation (.pdf format) summarizing insights and recommendations.
+ Order Data Analysis: Key Patterns and Trends
+
+## Objective
+The goal of this project is to analyze the order data from the restaurant to identify key patterns and trends, which will help in answering business questions related to improving customer experience and restaurant demand forecasting.
+
+### Key Business Questions:
+1. How can customer experience be improved?
+2. How can restaurants forecast demand better?
+
+## Approach
+
+### 1. Data Collection & Preparation
+- **Order Data**: Data is collected from restaurant orders, including:
+  - Order timestamp
+  - Customer details (e.g., demographics, order frequency)
+  - Meal types and order sizes
+  - Delivery times and statuses (e.g., canceled, delivered)
+  
+- **Data Preprocessing**:
+  - Handle missing values and outliers
+  - Standardize time zones and order details
+  - Preprocess text if necessary (e.g., reviews or feedback)
+
+### 2. Exploratory Data Analysis (EDA)
+We conducted an in-depth exploration of the order data to uncover patterns and trends:
+
+- **Key Patterns**:
+  - Popular meal types and ingredients
+  - Peak order hours/days of the week
+  - Delivery times and customer satisfaction levels
+  
+- **Trends**:
+  - Seasonal demand fluctuations (e.g., holidays, special events)
+  - Correlation between promotions/discounts and order frequency
+
+### 3. Feature Engineering
+We created new features based on domain knowledge:
+- **Day of the week**: Weekday vs. weekend orders
+- **Order size**: Small/Medium/Large categories
+- **Customer proximity**: Distance from restaurant
+- **Discount/Promotions**: Impact of promotions on order frequency
+
+### 4. Model Development
+We used machine learning models to classify order data and make predictions:
+
+- **Random Classifier**:
+  - Used as a baseline model to evaluate the effectiveness of the classification tasks.
+  - Randomly assigns labels to simulate predictions, which we compare against more refined models.
+
+- **Decision Trees/Random Forest**:
+  - Aimed to predict significant outcomes such as:
+    - Predicting order cancellations
+    - Identifying high-demand time periods
+    - Forecasting order sizes
+  
+- **Pruning**:
+  - Applied pruning techniques to decision tree models to remove branches that do not contribute significantly to prediction accuracy, thus reducing model complexity and overfitting.
+
+### 5. Results & Insights
+- Identified peak order times and days.
+- Found correlations between promotional offers and increased order volume.
+- Gained insights into the impact of delivery times on customer satisfaction.
+
+### 6. Business Implications
+- **Improving Customer Experience**: 
+  - Recommendations for adjusting restaurant working hours based on peak demand times.
+  - Tailoring promotions to customer preferences and ordering behavior.
+  
+- **Demand Forecasting**:
+  - Use predictive models to adjust staffing levels and inventory management during high-demand periods.
+  - Plan for seasonal fluctuations and unexpected surges in demand.
+
+## Installation and Setup
+
+### Requirements:
+- Python 3.x
+- Libraries: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, etc.
+
 
